@@ -1,0 +1,6 @@
+# Cursor Rules
+
+Lee y respeta siempre las instrucciones maestras en [AGENTS.md](./AGENTS.md).
+- Si el repositorio está en blanco, inicia la entrevista de producto para el fundador (`.cursor/skills/bootstrap-startup/SKILL.md`).
+- Sigue las reglas de seguridad, arquitectura y testing en `.cursor/rules/`.
+- No generes código sin especificación previa aprobada.
