@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hooks": {
+    "beforeFileEdit": [
+      {
+        "command": "node scripts/hooks/guard-sdd.mjs"
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": "node scripts/hooks/guard-shell.mjs"
+      }
+    ],
+    "afterFileEdit": [
+      {
+        "command": "node scripts/hooks/audit-edit.mjs"
+      }
+    ]
+  }
+}

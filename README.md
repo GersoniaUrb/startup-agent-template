@@ -1,98 +1,87 @@
 # 🚀 AI-First Startup Canvas: El Arnés Universal para Vibe Coders
 
-[![AI-First Canvas](https://img.shields.io/badge/AI--First-Startup%20Canvas-6366f1.svg?style=for-the-badge)](https://github.com)
-[![Spec-Driven Development](https://img.shields.io/badge/Metodología-Spec--Driven%20Development-10b981.svg?style=for-the-badge)](https://github.com)
-[![Compatible](https://img.shields.io/badge/Compatible-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Codex-f59e0b.svg?style=for-the-badge)](https://github.com)
+[![AI-First Canvas](https://img.shields.io/badge/AI--First-Startup%20Canvas-6366f1.svg?style=for-the-badge)](https://github.com/GersoniaUrb/startup-agent-template)
+[![Spec-Driven Development](https://img.shields.io/badge/Metodología-Spec--Driven%20Development-10b981.svg?style=for-the-badge)](https://github.com/GersoniaUrb/startup-agent-template)
+[![Multi-Agent Symmetric](https://img.shields.io/badge/Compatible-Antigravity%20%7C%20Claude%20%7C%20Cursor%20%7C%20Codex-f59e0b.svg?style=for-the-badge)](https://github.com/GersoniaUrb/startup-agent-template)
+[![Hardened SDD Hooks](https://img.shields.io/badge/Gobernanza-Deterministic%20Hooks%20Active-ef4444.svg?style=for-the-badge)](https://github.com/GersoniaUrb/startup-agent-template)
 
-> **Plantilla de repositorio en blanco lista para orquestar la creación de una startup o producto digital de primer nivel utilizando agentes de Inteligencia Artificial, sin necesidad de saber programar.**
+> **Lienzo en blanco con arnés de agentes y Spec-Driven Development (SDD) para que cualquier persona, sin saber programar, orqueste y construya productos digitales y startups de nivel mundial.**
 
 ---
 
 ## 🎯 ¿Qué es este repositorio?
 
-Este repositorio es un **lienzo en blanco pre-orquestado** que implementa los dos estándares más avanzados de la ingeniería de software moderna con IA:
-1. **El Arnés del Agente (Agent Harness):** Barandillas de seguridad OWASP, reglas de arquitectura limpia, prevención de errores y subagentes auditores.
-2. **Spec-Driven Development (SDD):** El método donde primero se diseña la especificación del producto en lenguaje humano (`spec.md`), luego el plano técnico (`plan.md`), luego las tareas (`tasks.md`), y finalmente se escribe código blindado con pruebas automáticas (TDD).
-
-Cualquier modelo de lenguaje o editor de código con IA que abras (**Google Antigravity IDE, Claude Code, Cursor, OpenAI Codex, GitHub Copilot**) leerá este arnés y asumirá de inmediato el rol de tu **Director de Tecnología (CTO) y Equipo de Ingeniería Senior**.
+Este repositorio es una plantilla agéntica pre-orquestada que implementa la arquitectura más avanzada de la ingeniería de software moderna:
+1. **El Arnés Simétrico Multi-Entorno:** Funciona de forma 100% nativa en **Google Antigravity IDE** (`.agents/`, `GEMINI.md`), **Claude Code** (`.claude/`, `CLAUDE.md`) y **Cursor** (`.cursor/`, `.cursorrules`).
+2. **Gobernanza Dura con Hooks Deterministas:** Incluye scripts en Node.js que **bloquean físicamente a la IA** si intenta escribir código antes de tener la visión definida o si intenta ejecutar comandos destructivos en la terminal.
+3. **Spec-Driven Development (SDD) con Compuertas de Aprobación:** La IA tiene prohibido tocar código sin una especificación y plan aprobados formalmente por el Fundador.
 
 ---
 
-## 🔄 El Flujo de Trabajo (De la Idea al Producto)
+## 🔄 El Ciclo de Vida del Producto (SDLC Agéntico)
 
 ```mermaid
 flowchart TD
-    A[💡 Tu Idea de Negocio] --> B[💬 Entrevista de Descubrimiento con la IA]
-    B --> C[📋 Generación de Visión y Modelo en specs/000-vision/]
-    C --> D[🛠️ Selección de Stack Moderno: Next.js + Supabase + Tailwind]
-    D --> E[📝 Spec Kit de la Funcionalidad: spec.md + plan.md + tasks.md]
-    E --> F[🧪 Pruebas Automáticas Primero - TDD en Rojo]
-    F --> G[💻 Implementación de Código Limpio - TDD en Verde]
-    G --> H[🔍 Auditoría con Subagente Code-Reviewer]
-    H --> I[🚀 Producto en Vivo Funcionando sin Bugs]
+    A[💡 Idea del Fundador] -->|Comando /bootstrap| B[💬 Entrevista de 2 Turnos con la IA]
+    B --> C[🌟 Visión Ejecutiva en specs/000-vision/vision.md]
+    C -->|Desbloqueo de Hooks SDD| D[📝 Redacción de spec.md con Resumen y Mermaid]
+    D -->|Comando /grill-me| E[🛡️ Auditoría de Riesgos y Casos Borde]
+    E -->|🛑 Compuerta 1: Aprobación del Fundador| F[🏛️ Plan Técnico en plan.md y tasks.md]
+    F -->|🛑 Compuerta 2: Aprobación del Fundador| G[🧪 TDD: Pruebas Primero en Rojo]
+    G --> H[💻 Implementación de Código en Verde]
+    H --> I[🔍 Auditoría con Subagente code-reviewer]
+    I --> J[🚀 Módulo Terminado y Blindado sin Regresiones]
 ```
 
 ---
 
-## ⚡ ¿Cómo usarlo en 3 sencillos pasos?
+## ⚡ ¿Cómo usarlo? (En 3 sencillos pasos)
 
-### 1. Abre el proyecto en tu editor de IA
-Abre este directorio en **Antigravity IDE**, **Cursor**, **VS Code** o ejecuta **Claude Code** en la terminal.
+### 1. Clona o crea tu repo usando esta plantilla
+Haz clic en el botón verde de GitHub **"Use this template"** ➔ **"Create a new repository"**, o clónalo en tu máquina:
+```bash
+git clone git@github.com:GersoniaUrb/startup-agent-template.git mi-startup
+cd mi-startup
+```
 
-### 2. Pega el prompt de arranque
-En la ventana de chat con la IA, copia y pega este comando:
+### 2. Abre tu editor de IA favorito y arranca
+Abre la carpeta en **Antigravity IDE**, **Cursor** o ejecuta **Claude Code** en la terminal.  
+En el chat, simplemente escribe:
 
 ```text
-Hola. Lee este repositorio, revisa AGENTS.md y empieza la entrevista inicial para crear mi producto.
+/bootstrap
 ```
+*(O también: "Hola. Lee este repositorio y empieza la entrevista inicial para crear mi producto")*.
 
-*(En Antigravity también puedes usar los comandos `/bootstrap` o `/grill-me`)*.
-
-### 3. Responde como Fundador (en español simple)
-La IA te hará 5 preguntas estratégicas sobre tu producto:
-- **Problema y Cliente:** ¿A quién ayudas y qué dolor resuelves?
-- **El Momento 'Eureka':** ¿Qué acción principal hace el usuario en la app?
-- **Monetización:** ¿Cómo vas a cobrar (suscripción, comisión, pago único)?
-- **Datos y Seguridad:** ¿Qué datos sensibles se guardarán?
-- **Servicios Externos:** ¿Qué herramientas necesitas conectar (Stripe, WhatsApp, Google OAuth)?
-
-Con tus respuestas, la IA generará la arquitectura, configurará la base de datos y comenzará a construir tu MVP paso a paso.
+### 3. Conduce la Entrevista como Fundador
+La IA ejecutará la habilidad interactiva en **2 turnos sin abrumarte**:
+- **Turno 1 (Negocio):** Dolor del cliente, acción 'Eureka' y modelo de cobro (con mentalidad de socio de Y Combinator para mantener el MVP acotado).
+- **Turno 2 (Riesgo y Conectores):** Datos confidenciales (seguridad) y servicios externos (Stripe, WhatsApp, Auth).
 
 ---
 
-## 🏛️ Estructura del Canvas
+## 🛡️ Gobernanza Dura y Hooks Físicos
 
-```
-├── AGENTS.md                  # El manual maestro universal para cualquier LLM
-├── CLAUDE.md                  # Configuración optimizada para Claude Code
-├── .cursorrules               # Configuración optimizada para Cursor
-├── .specify/                  # El motor de Spec-Driven Development (SDD)
-│   └── memory/constitution.md # Principios innegociables de calidad y seguridad
-├── specs/                     # Carpeta de especificaciones de producto
-│   ├── 000-vision/            # Visión general y roadmap de la startup (vision.md)
-│   └── templates/             # Plantillas profesionales de spec, plan y tasks
-├── .claude/ (y .cursor/)
-│   ├── rules/                 # Barandillas: Seguridad OWASP, Arquitectura limpia, TDD
-│   ├── skills/                # Habilidades interactivas (ej. bootstrap-startup)
-│   └── agents/                # Subagentes especializados (ej. code-reviewer)
-└── docs/                      # Documentación viva (Arquitectura, DB, Seguridad, etc.)
-```
+A diferencia de otros prompts que la IA puede olvidar, este canvas incluye **hooks físicos en Node.js** (`scripts/hooks/`) configurados en `.claude/settings.json`, `.cursor/hooks.json` y `.agents/hooks.json`:
+
+| Hook | Evento | Función de Protección |
+|:---|:---|:---|
+| **`guard-sdd.mjs`** | `PreToolUse` (Edit / Write) | **Bloquea la escritura de código:** Si `specs/000-vision/vision.md` sigue `[EN BLANCO]`, el hook aborta la acción con código 2 impidiendo generar código prematuro. |
+| **`guard-shell.mjs`** | `PreToolUse` (Bash / Shell) | **Bloquea comandos destructivos:** Impide `rm -rf`, `git push --force`, `git reset --hard`, `DROP TABLE` o lectura directa de archivos `.env`. |
+| **`audit-edit.mjs`** | `PostToolUse` (Edit / Write) | **Auditoría silenciosa:** Registra cada cambio con timestamp y usuario en `.audit/edits.jsonl`. |
 
 ---
 
-## 🛡️ Barandillas de Seguridad Incluidas (Guards)
+## 🛑 El Protocolo de Compuertas (Gatekeeping)
 
-El arnés ya incluye protecciones predefinidas para que la IA nunca cometa errores graves:
-- 🔒 **Cero Secretos Expuestos:** Llaves de API y credenciales van obligatoriamente en `.env`, nunca en el código.
-- 💉 **Blindaje contra Inyecciones SQL:** Solo se permiten consultas parametrizadas u ORMs seguros.
-- 🛡️ **Validación de Entradas:** Todo endpoint valida sus datos entrantes con esquemas estrictos.
-- 🧪 **Cero Regresiones (TDD):** Ninguna tarea se considera terminada hasta que el 100% de las pruebas automatizadas pasen en verde.
-- 📦 **Contratos Limpios (DTOs):** Las tablas de base de datos nunca se exponen crudas al frontend.
+En este canvas, **el Fundador tiene el control absoluto**:
+- La IA tiene prohibido pasar de `spec.md` a `plan.md` sin que el Fundador lea el **Resumen Ejecutivo (3 líneas)** y el **Diagrama Visual**, y responda afirmativamente.
+- La IA tiene prohibido empezar a escribir código sin la aprobación del **Plan Técnico**.
 
 ---
 
-## 🤝 Las 3 Reglas de Oro para el Vibe Coder
+## ⌨️ Comandos Agénticos Disponibles
 
-1. **Valida el Plano Primero:** Antes de autorizar a la IA a escribir código, revisa el resumen de la especificación y confirma que resuelve lo que tu cliente necesita.
-2. **Una Funcionalidad a la Vez:** No intentes construir una aplicación gigante de golpe. Avanza módulo por módulo (Autenticación ➔ Catálogo ➔ Pagos).
-3. **Exige Pruebas en Verde:** Cuando la IA diga que terminó, pídele que ejecute los tests automáticos y te muestre la pantalla en vivo.
+- **`/bootstrap`**: Inicia la entrevista interactiva de 2 turnos para calibrar el MVP.
+- **`/grill-me`**: Pone a prueba la especificación con 3 preguntas incisivas sobre casos borde, costos ocultos y riesgos de negocio.
+- **`/plan`**: Genera la arquitectura técnica (`plan.md`) y el plan de tareas TDD (`tasks.md`).

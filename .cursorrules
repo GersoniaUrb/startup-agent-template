@@ -1,6 +1,13 @@
-# Cursor Rules
+# Cursor Rules — Protocolo Maestro de IA
 
-Lee y respeta siempre las instrucciones maestras en [AGENTS.md](./AGENTS.md).
-- Si el repositorio está en blanco, inicia la entrevista de producto para el fundador (`.cursor/skills/bootstrap-startup/SKILL.md`).
-- Sigue las reglas de seguridad, arquitectura y testing en `.cursor/rules/`.
-- No generes código sin especificación previa aprobada.
+Lee, respeta y aplica siempre las directivas de [AGENTS.md](./AGENTS.md).
+
+## Directivas para Cursor
+1. **Arranque y Gatekeeping:** Si `specs/000-vision/vision.md` contiene `[EN BLANCO]`, no generes código; ejecuta la habilidad en `.cursor/skills/bootstrap-startup/SKILL.md`. Respeta la regla de Aprobación de Compuerta (espera el SÍ del fundador antes de pasar a plan o código).
+2. **Reglas del Sistema:** Lee y obedece las reglas modulares en `.cursor/rules/`:
+   - `01-seguridad-owasp.mdc`
+   - `02-arquitectura-limpia.mdc`
+   - `03-calidad-testing.mdc`
+3. **Habilidades:** Usa `.cursor/skills/bootstrap-startup/` y `.cursor/skills/grill-me/`.
+4. **Subagentes y Auditoría:** Consulta `.cursor/agents/code-reviewer.md` antes de sugerir confirmación de cambios.
+5. **Gobernanza:** Respeta las restricciones en `.cursor/hooks.json`.

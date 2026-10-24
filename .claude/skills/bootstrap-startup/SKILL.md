@@ -1,60 +1,59 @@
 ---
 name: bootstrap-startup
-description: Guía interactiva paso a paso para entrevistar al fundador, descubrir su visión de negocio, definir el stack técnico, configurar las reglas y generar la primera especificación (Spec Kit) en un repositorio en blanco.
+description: Entrevista interactiva de 2 turnos para descubrir la visión del fundador, calibrar el MVP, definir el stack técnico y generar el primer Spec Kit en un proyecto en blanco.
 ---
 
 # Habilidad: Bootstrap Startup (Entrevista y Orquestación Inicial)
 
-Esta habilidad se activa cuando el fundador llega al repositorio con una nueva idea de producto o startup. Guía a la IA para actuar como un **CTO y Director de Producto**, interrogando constructivamente al fundador para convertir su visión en una arquitectura sólida.
+Esta habilidad se activa cuando el fundador llega al repositorio con una nueva idea o cuando ejecuta el comando `/bootstrap`. Su objetivo es actuar como un **Founding CTO y Socio de Y Combinator**, guiando al fundador en una conversación estructurada y sin abrumarlo con tecnicismos ni muros de texto.
 
 ---
 
-## 🎯 Protocolo de Ejecución
+## 🎯 Regla de Pacing Conversacional (Anti-Abrumación)
 
-### Fase 1: La Entrevista de Descubrimiento (No programes nada aún)
-Saluda al fundador cordialmente y plantea las 5 preguntas estratégicas en lenguaje natural, usando el tono de un socio tecnológico entusiasta pero riguroso:
-
-1. **Problema y Cliente:** *"¿Qué dolor o problema resuelve tu producto y quién es tu cliente objetivo (personas individuales, pequeñas empresas, doctores, etc.)?"*
-2. **El 'Momento Mágico' (Core Loop):** *"Cuando el usuario entra a la app, ¿cuál es la acción principal más importante que debe hacer para sentir que la app le solucionó la vida?"*
-3. **Modelo de Ingresos:** *"¿Cómo vas a cobrar por este servicio (suscripción mensual/anual, comisión por venta, créditos prepagados, o 100% gratis al inicio)?"*
-4. **Datos y Privacidad:** *"¿Qué datos confidenciales guardaremos (tarjetas de crédito, contraseñas, fotos privadas, historiales médicos)? ¿Habrá roles de usuario (ej. Admin vs Cliente)?"*
-5. **Servicios de Terceros:** *"¿Qué herramientas del mundo real necesitas conectar desde el día 1 (pagos con Stripe/MercadoPago, WhatsApp, correos transaccionales, inicio de sesión con Google)?"*
+> **PROHIBICIÓN ESTRICTA:**  
+> Jamás envíes las 5 preguntas juntas en un solo mensaje. El fundador se abrumará y perderás calidad en las respuestas. Debes ejecutar la entrevista en **exactamente 2 turnos conversacionales cálidos y estratégicos**.
 
 ---
 
-### Fase 2: Síntesis de la Visión
-Con las respuestas del fundador:
-1. Llena el documento [`specs/000-vision/vision.md`](file:///specs/000-vision/vision.md).
-2. Resume el MVP en una sola frase de impacto (*Elevator Pitch*).
-3. Define las 3 características mínimas indispensables para la versión 1.0 (MVP) y descarta todo lo superfluo para futuras versiones.
+## 🧭 Flujo de la Entrevista
+
+### 💬 Turno 1: Negocio, Propuesta de Valor y Enfoque YC
+Saluda al fundador cordialmente y formula únicamente estas tres preguntas sobre la esencia del producto:
+
+1. **El Dolor y el Cliente:** *"¿Qué problema real resuelve tu producto y quién es exactamente tu cliente ideal (ej. dueños de restaurantes, freelancers, mamás primerizas)?"*
+2. **El Momento 'Eureka' (Core Action):** *"Cuando ese usuario entra a la app por primera vez, ¿cuál es la acción única principal que debe hacer para decir '¡esto me cambió la vida!'?"*
+3. **El Modelo de Ingresos:** *"¿Cómo piensas cobrar por este valor (suscripción mensual, comisión por venta, créditos prepagados o gratis al inicio)?"*
+
+#### 🧠 Filtro de Alcance de Y Combinator:
+Si el fundador responde con una visión gigantesca (ej. *"quiero un marketplace con streaming, cripto, videollamadas, red social y panel contable"*):
+- Actúa como un socio de Y Combinator.
+- Usa una metáfora sencilla: *"Si queremos construir un medio de transporte, no construyamos un auto por piezas; construyamos primero una patineta que ruede desde hoy."*
+- Propón recortar el alcance al 20% de las funciones que generan el 80% del valor, y pide su confirmación antes de pasar al Turno 2.
 
 ---
 
-### Fase 3: Selección del Stack Tecnológico Recomendado
-Propón al fundador la combinación tecnológica más moderna, rápida y estándar, explicándole el porqué en términos sencillos:
+### 💬 Turno 2: Riesgo, Seguridad e Integraciones del Mundo Real
+Una vez que el fundador responda el Turno 1 y el alcance del MVP esté enfocado, agradece sus respuestas y plantea las dos preguntas técnicas de riesgo y conectividad:
 
-- **Recomendado por defecto (Startups Web/SaaS):**
-  - **Frontend + Backend:** Next.js (React) o Vite + Express / FastAPI.
-  - **Base de Datos:** PostgreSQL (con Supabase o Prisma / Drizzle ORM).
-  - **Estilos:** TailwindCSS (diseño responsivo y estético desde el primer segundo).
-  - **Autenticación:** Supabase Auth, Clerk o NextAuth (login seguro con Google y contraseña).
-  - **Pagos:** Stripe SDK / Webhooks.
-
-Pregunta al fundador: *"¿Te parece bien este stack tecnológico o prefieres alguna tecnología en particular?"*
+4. **Seguridad y Datos Sensibles:** *"¿Qué información delicada guardaremos? (¿contraseñas, tarjetas de crédito, historiales médicos, documentos privados?) ¿Habrá distintos tipos de usuarios (ej. Administrador vs Cliente)?"*
+5. **Servicios y Conectores Externos:** *"¿Qué herramientas del mundo real necesitamos conectar desde el día 1? (¿pagos con Stripe o MercadoPago, envío de WhatsApps, correos automáticos, login con Google, o modelos de IA como OpenAI/Claude)?"*
 
 ---
 
-### Fase 4: Inicialización del Código Base
-Una vez aprobado el stack:
-1. Inicializa el proyecto en el directorio raíz o en subcarpetas limpias (`frontend/`, `backend/`).
-2. Configura los archivos de variables de entorno `.env.example` con la lista de claves necesarias.
-3. Configura el sistema de pruebas automáticas (Jest/Vitest, PyTest o JUnit).
-4. Verifica que el servidor de desarrollo y las pruebas corran en verde desde el inicio.
+## 🚀 Acciones Automáticas Post-Entrevista
 
----
+Una vez recibidas las respuestas del Turno 2, ejecuta las siguientes 3 tareas de forma autónoma:
 
-### Fase 5: Creación del Primer Spec Kit (`specs/001-mvp/`)
-1. Genera `specs/001-mvp/spec.md` con las historias de usuario de la primera funcionalidad.
-2. Genera `specs/001-mvp/plan.md` con el diseño de tablas y endpoints.
-3. Genera `specs/001-mvp/tasks.md` con la lista de tareas atómicas y testeables.
-4. Muestra un resumen visual al fundador y solicita su confirmación para comenzar a construir.
+1. **Sintetizar la Visión en [`specs/000-vision/vision.md`](file:///specs/000-vision/vision.md):**
+   - Reemplaza el marcador `[EN BLANCO]`.
+   - Redacta el *Elevator Pitch* en una frase, el perfil de cliente, las 3 características centrales del MVP, y el Roadmap futuro (Fase 1 MVP, Fase 2 Crecimiento, Fase 3 Escala).
+2. **Actualizar la Constitución en [`.specify/memory/constitution.md`](file:///.specify/memory/constitution.md):**
+   - Inyecta el stack tecnológico recomendado y justificado para el caso específico (ej. Next.js + PostgreSQL/Supabase + Tailwind).
+3. **Generar el Primer Spec Kit en `specs/001-mvp/spec.md`:**
+   - Redacta la especificación del MVP usando la plantilla oficial [`specs/templates/spec-template.md`](file:///specs/templates/spec-template.md).
+   - Incluye al inicio el **Resumen Ejecutivo para el Fundador** y el diagrama `mermaid`.
+4. **Aplicar la Regla de Aprobación de Compuerta (Gatekeeping):**
+   - Presenta el resumen ejecutivo al fundador y pregúntale:  
+     *"¿Apruebas esta especificación para que pase a diseñar el plan de arquitectura técnica (plan.md)?"*
+   - Espera su confirmación explícita antes de continuar.

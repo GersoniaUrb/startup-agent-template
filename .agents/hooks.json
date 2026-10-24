@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "command": "node scripts/hooks/guard-sdd.mjs"
+      },
+      {
+        "matcher": "run_command",
+        "command": "node scripts/hooks/guard-shell.mjs"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "write_to_file|replace_file_content|multi_replace_file_content",
+        "command": "node scripts/hooks/audit-edit.mjs"
+      }
+    ]
+  }
+}
